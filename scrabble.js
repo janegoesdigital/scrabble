@@ -4,19 +4,47 @@ $( document ).ready(function() {
 
 console.log("jQuery ready");
 
-//this works to look through a string and see if there is a letter in it
-//
 
 var wordsIn = ["a","b","c", "do", "don't", "orange", "ox", "eleven", "qi"];
 var wordsOut = ["f", "g", "bbbl", "goad"];
 
-// var testWord = "azofllll";
-// console.log(testWord.search('l'));
+//find me words with the testLetter in it so I can play it
 
-var contains = function(letter){
-	testWord.search(letter);
+var hasLetter = function(testLetter){
+	var selectedWords = [];
+	var message;
+		for (i  = 0 ; i < wordsIn.length; i ++) {
+			var testWord = wordsIn[i];
+			var testIn = testWord.search(testLetter);
+			if (testIn >=0){
+				selectedWords.push(testWord);
+			}
+		};
+		if ( selectedWords.length > 0 ) {
+			message = "The words you are looking for are: " + selectedWords;
+		}
+		else {
+		message = "Hmmm...can't find any words with that letter - can you belive that!";
+		}
+		console.log(message);
 
-};
+	// $("#oldLetter").remove();
+	// 	var $newP = $( "<p id='oldLetter'></p>" );
+	// 	$newP.html(message);
+	// $("#hasLetterAnswer").append($newP);
+
+	};
+
+
+
+hasLetter("f");
+
+$( "#testLetterForm" ).submit(function( event ) {
+	var testLetter = $("#testLetter").val();
+	console.log(testLetter);
+	hasLetter(testLetter);
+  event.preventDefault();
+});
 
 
 // console.log(words.indexOf("do"));
@@ -31,8 +59,6 @@ var findWord = function(word, wordList){
 	}
 };
 
-findWord("a", wordsIn);
-
 var isWord = function(word){
 	var checkIn = findWord(word, wordsIn);
 	console.log("Checkin " + checkIn);
@@ -45,17 +71,18 @@ var isWord = function(word){
 	}
 	else if (checkOut === true) {
 		message = "Nah.  We looked " + "<strong>" + word + "</strong>" + " up before and it ain't a word";
-
 	}
 	else {
 		message = "Oh no! We don't know yet whether " + "<strong>" + word + "</strong> " + " is in or out!";
 
 	}
-	console.log("The message from the isWord function is: " + message);
-  var $p = $( "<p></p>" );
-  $p.html(message);
-  $("#isWordForm").after($p);
+	 $("#oldAnswer").remove();
+  	var $newP = $( "<p id='oldAnswer'></p>" );
+  	$newP.html(message);
+  $("#isWordAnswer").append($newP);
 };
+
+
 
 
 
@@ -65,6 +92,7 @@ $( "#isWordForm" ).submit(function( event ) {
 	isWord(word);
   event.preventDefault();
 });
+
 
 
 
