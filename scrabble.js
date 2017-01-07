@@ -19,27 +19,25 @@ var hasLetter = function(testLetter){
 			if (testIn >=0){
 				selectedWords.push(testWord);
 			}
-		};
+		}
 		if ( selectedWords.length > 0 ) {
-			message = "The words you are looking for are: " + selectedWords;
+			message = "The words that contain the letter <strong>" + testLetter + "</strong> are: " + selectedWords;
+			console.log(message);
 		}
 		else {
-		message = "Hmmm...can't find any words with that letter - can you belive that!";
+		message = "Hmmm...can't find any words with the letter" +  testLetter + "- can you belive that!";
 		}
 		console.log(message);
 
-	// $("#oldLetter").remove();
-	// 	var $newP = $( "<p id='oldLetter'></p>" );
-	// 	$newP.html(message);
-	// $("#hasLetterAnswer").append($newP);
+		$("#oldLetter").remove();
+		var $newP = $( "<p id='oldLetter'></p>" );
+		$newP.html(message);
+		$("#hasLetterAnswer").prepend($newP);
 
 	};
 
 
-
-hasLetter("f");
-
-$( "#testLetterForm" ).submit(function( event ) {
+$("#testLetterForm" ).submit(function( event ) {
 	var testLetter = $("#testLetter").val();
 	console.log(testLetter);
 	hasLetter(testLetter);
@@ -81,10 +79,6 @@ var isWord = function(word){
   	$newP.html(message);
   $("#isWordAnswer").append($newP);
 };
-
-
-
-
 
 $( "#isWordForm" ).submit(function( event ) {
 	var word = $("#yourWord").val();

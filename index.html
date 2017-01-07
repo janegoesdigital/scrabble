@@ -4,32 +4,45 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
 	<title>Scrabble</title>
 </head>
 <body>
-<h1>Jane and Ben's scrabble!</h1>
-<!-- <h2>Is it an available two letter word!</h2>
 
-<form id="isWordForm" action="index.html">
-	<fieldset>
-   <legend>What word are you looking for?</legend>
-   	<textarea id="yourWord" name="word" rows="1" cols="50"> Your word</textarea>
-	  <input type="submit" name="submitWord" id="submitWord" value="Submit">
-		<p id="isWordAnswer">Like magic, your answer will appear here!</p>
-  </fieldset>
-</form> -->
+	<div class="container">
+		<h1>Jane and Ben's scrabble!</h1>
 
-<h2>Stuck? Word with what letter you ask????</h2>
-<form id="testLetterForm" action="index.html">
-	<fieldset>
-   <legend>What word are you looking for?</legend>
-   	<textarea id="testLetter" name="letter" rows="1" cols="50">a</textarea>
-	  <input type="submit" name="submitLetter" id="submitLetter" value="Submit">
-		<p id="hasLetterAnswer">Like magic, your answer will appear here!</p>
-  </fieldset>
-</form>
+		<div class="grid">
+	    <div class="col col-4 blueSq"><h2>Our rules</h2></div>
+	    <div class="col col-4 greenSq"></h2></div>
+	    <div class="col col-4 blueSq"><h2>Our words</div>
 
+			<div class="col col-4 greenSq">
+				<h2>Find our 2 letter word</h2>
+				<form id="isWordForm" action="index.html">
+				<textarea id="yourWord" name="word" rows="1" cols="10"> Your word</textarea>
+				<input type="submit" name="submitWord" id="submitWord" value="Submit">
+				<p id="isWordAnswer">Like magic, your answer will appear here!</p>
+			</div>
+			</form>
 
+		   <div class="col col-4" id="star"></div>
+
+			<div class="col col-4 greenSq">
+					<h2>Find our words with that letter</h2>
+					<form id="testLetterForm" action="index.html">
+					   	<textarea id="testLetter" name="letter" rows="1" cols="10">a</textarea>
+						  <input type="submit" name="submitLetter" id="submitLetter" value="Submit">
+							<p id="hasLetterAnswer">Like magic, your answer will appear here!</p>
+					</form>
+				</div>
+
+			<div class="col col-4 blueSq"><h2>Our rules</h2></div>
+		  <div class="col col-4 greenSq"></h2></div>
+		  <div class="col col-4 blueSq"><h2>Our words</div>
+
+		</div>
+	</div>
 
 
 	<script src="jquery.js" charset="utf-8"></script>

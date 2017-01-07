@@ -1,0 +1,91 @@
+body {
+	background-image: url(board2.png);
+	background-size: 100%;
+	background-position: right top;
+  background-attachment: fixed;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+
+.container {
+	background-color: purple;
+	width: 80%;
+	/*margin: 10%;*/
+	padding; 10%;
+	margin-right: 10%;
+	margin-left: 10%;
+
+}
+
+
+h1 {
+	color: white;
+	text-shadow: 2px 2px 2px 2px hotpink;
+	background-color: red;
+	padding: 3rem;
+	margin-right: 10%;
+	margin-left: 10%;
+	/*position: fixed;*/
+}
+
+/*.form {
+	background-color: #bba5aa;
+	margin: 5rem;
+	padding: 5rem;
+	display: inline-block;
+}*/
+
+
+* {
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid {
+	margin-left: 10em;
+	margin-right: 10em;
+	background-color: red;
+}
+
+.col {
+  float: left;
+  min-height: 200px;
+  border: 10px solid black;
+  background: gainsboro;*/
+  webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s;
+}
+
+.col-4 {
+    width: 33.333333333%;
+    width: -webkit-calc(100% / 3);
+    width: -moz-calc(100% / 3);
+    width: -ms-calc(100% / 3);
+    width: -o-calc(100% / 3);
+    width: calc(100% / 3);
+	}
+
+.pinkSq{
+			background: pink;
+		}
+
+.blueSq {
+	background-color: #79cadf;
+}
+
+.greenSq {
+	background-color: #3a6f6c;
+}
+
+#star {
+	background-image: url(star.png);
+	background-size: 100%;
+}
