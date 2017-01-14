@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Scrabble</title>
+</head>
+<body>
+
+
+<div class="grid">
+	<div class="col col-90 redSq">
+		<h1>Our scrabble!</h1>
+		<nav>
+			<a href="#isWord">find word</a>
+			<a href="#hasLetter">contains</a>
+			<a href="#ourRules">our rules</a>
+			<a href="#wordsIn">all our words</a>
+		</nav>
+	</div>
+
+
+			<div class="col col-90 greenSq" id="isWord">
+				<h2>Can I use this word?</h2>
+				<form id="isWordForm" action="index.html">
+				<textarea id="yourWord" name="word" rows="1" cols="10"></textarea>
+				<input type="submit" name="submitWord" id="submitWord" value="Submit">
+				<p id="isWordAnswer"></p>
+				</form>
+			</div>
+
+			<div class="col col-90 pinkSq" id="hasLetter">
+					<h2>Help! What words have this letter in it?</h2>
+					<form id="testLetterForm" action="index.html">
+					   	<textarea id="testLetter" name="letter" rows="1" cols="20"></textarea>
+						  <input type="submit" name="submitLetter" id="submitLetter" value="Submit">
+							<p id="hasLetterAnswer"></p>
+					</form>
+				</div>
+
+	    <div class="col col-90 blueSq" id="ourRules">
+				<h2>Our rules</h2>
+				<p>Adjusting the points at the end by both adding the points of the letters remaining to the person with no tiles score AND substracting them from the other person's score.   Ok there's only two of us - so seems like a double penalty.  We don't do it!</p>
+			</div>
+
+				<div class="col col-50 greenSq" id="wordsIn">
+				<h2>Browse our words</h2>
+					</div>
+			  <div class="col col-50 greenSq" id="wordsOut">
+					<h2>Browse our 'not words'</h2>
+					</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+	<script src="jquery.js" charset="utf-8"></script>
+	<script src="scrabble.js" charset="utf-8"></script>
+</body>
+</html>
